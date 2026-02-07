@@ -1,0 +1,28 @@
+════════════════════════════════════════════════════════════
+  WEBSITE SIAP UPLOAD KE CPANEL RUMAHWEB
+════════════════════════════════════════════════════════════
+
+📦 FILE INI SUDAH SIAP UNTUK DIUPLOAD!
+
+✅ CARA CEPAT UPLOAD:
+1. Login ke cPanel Rumahweb
+2. Buka File Manager → public_html
+3. Extract/Upload semua file dari folder "website-untuk-cpanel/" ke sini
+4. Pastikan .htaccess sudah ada
+5. Akses domain Anda - SELESAI! 🎉
+
+⚠️ PENTING:
+- Jangan lupa file ".htaccess" - INI WAJIB ada!
+- Kalau routing error, pastikan mod_rewrite aktif (hubungi Rumahweb support)
+- Clear cache browser jika perlu (Ctrl+F5)
+
+📁 ISI FOLDER:
+- index.html → File utama
+- assets/ → CSS & JavaScript (compiled)
+- .htaccess → Konfigurasi routing (WAJIB!)
+- PANDUAN-CPANEL.md → Panduan lengkap
+
+📞 PERLU BANTUAN?
+Baca PANDUAN-CPANEL.md untuk instruksi detail & troubleshooting
+
+════════════════════════════════════════════════════════════

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Siap Upload ke cPanel - Panduan</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .status-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .status-box h3 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+        .status-box p {
+            color: #388e3c;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+        .section h3 {
+            color: #764ba2;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .step {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .warning-box {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .warning-box h3 {
+            color: #e65100;
+            margin-bottom: 8px;
+        }
+        .warning-box p {
+            color: #f57c00;
+        }
+        .file-list {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+        }
+        .file-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f5f5f5;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        .file-item.important {
+            background: #fff9c4;
+            border-left: 3px solid #fbc02d;
+            padding-left: 15px;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .button-primary {
+            background: #667eea;
+            color: white;
+        }
+        .button-primary:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .button-secondary {
+            background: #f5f5f5;
+            color: #333;
+            border: 2px solid #667eea;
+        }
+        .button-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        .footer {
+            background: #f5f5f5;
+            padding: 20px 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-right: 5px;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Website Anda Siap!</h1>
+            <p>Panduan Upload ke cPanel Rumahweb</p>
+        </div>
+
+        <div class="content">
+            <div class="status-box">
+                <h3>✅ Status: SIAP UPLOAD</h3>
+                <p>File website Anda sudah di-compile dan siap diupload ke cPanel Rumahweb. Ikuti panduan di bawah ini untuk memulai!</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">📦</span>File yang Sudah Disiapkan</h2>
+                <p>Anda memiliki file berikut yang siap untuk diupload:</p>
+                <div class="file-list">
+                    <div class="file-item"><strong>website-cpanel-ready.zip</strong> - File utama siap upload (138 KB)</div>
+                    <div class="file-item important"><strong>.htaccess</strong> - Konfigurasi routing (WAJIB ADA!)</div>
+                    <div class="file-item"><strong>index.html</strong> - File HTML utama aplikasi</div>
+                    <div class="file-item"><strong>assets/index-Dsqa7O20.js</strong> - JavaScript compiled (494 KB)</div>
+                    <div class="file-item"><strong>assets/index-DC0SG-Zv.css</strong> - CSS compiled (2.8 KB)</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">⚡</span>Quick Start (3 Langkah Mudah)</h2>
+                
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Login ke Dashboard cPanel Rumahweb</strong>
+                    <p style="margin-top: 10px; color: #666;">
+                        Kunjungi panel.rumahweb.com atau akses cPanel melalui browser
+                    </p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Buka File Manager → public_html</strong>
+                    <p style="margin-top: 10px; color: #666;">
+                        Jika ada file lama, hapus terlebih dahulu untuk memastikan tidak ada konflik
+                    </p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Upload Semua File dari website-cpanel-ready.zip</strong>
+                    <p style="margin-top: 10px; color: #666;">
+                        Extract ZIP, kemudian upload:</p>
+                    <ul class="checklist">
+                        <li>index.html</li>
+                        <li>folder assets/ beserta isinya</li>
+                        <li>.htaccess (PENTING!)</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 5px; border-left: 4px solid #2196f3;">
+                    <strong style="color: #1565c0;">✓ Selesai!</strong> Akses domain Anda untuk melihat website live!
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h3><span class="icon">⚠️</span>Penting: Jangan Lupakan .htaccess!</h3>
+                <p>File <strong>.htaccess</strong> adalah file tersembunyi yang HARUS ada di folder root (public_html). File ini mengatur routing untuk SPA (Single Page Application) Anda agar bekerja dengan sempurna.</p>
+                <p style="margin-top: 10px;">Jika .htaccess tidak ada atau hilang, website mungkin menampilkan error 404 saat Anda mencoba akses path yang berbeda.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">📋</span>Metode Upload Lengkap</h2>
+                
+                <h3>Metode 1: File Manager (Mudah untuk Pemula)</h3>
+                <ol style="margin-left: 20px; margin-top: 10px;">
+                    <li>Login cPanel → File Manager</li>
+                    <li>Navigate ke <code>public_html</code></li>
+                    <li>Hapus file lama (jika ada)</li>
+                    <li>Klik Upload</li>
+                    <li>Pilih semua file dari folder website-untuk-cpanel</li>
+                    <li>Tunggu 100% complete</li>
+                    <li>Akses domain Anda ✓</li>
+                </ol>
+
+                <h3 style="margin-top: 25px;">Metode 2: FTP (Lebih Cepat untuk File Banyak)</h3>
+                <ol style="margin-left: 20px; margin-top: 10px;">
+                    <li>Download FTP Client: FileZilla (gratis)</li>
+                    <li>Di cPanel, cari "FTP Accounts" untuk dapat kredensial</li>
+                    <li>Masuk ke FileZilla dengan akun FTP</li>
+                    <li>Navigate ke <code>public_html</code></li>
+                    <li>Drag & drop semua file dari folder website-untuk-cpanel</li>
+                    <li>Upload selesai, akses domain Anda ✓</li>
+                </ol>
+
+                <h3 style="margin-top: 25px;">Metode 3: Addon Domain (untuk Subfolder)</h3>
+                <p>Jika ingin website di subfolder (domain.com/nama-folder/):</p>
+                <ol style="margin-left: 20px; margin-top: 10px;">
+                    <li>Buat folder baru di public_html</li>
+                    <li>Upload semua file ke folder tersebut</li>
+                    <li>Akses di domain.com/nama-folder/ ✓</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">🔍</span>Troubleshooting</h2>
+
+                <h3>❌ Website blank / Error 404 saat refresh</h3>
+                <p><strong>Solusi:</strong></p>
+                <ul class="checklist">
+                    <li>Clear cache browser (Ctrl+F5 atau Cmd+Shift+R)</li>
+                    <li>Pastikan .htaccess ada di public_html</li>
+                    <li>Tunggu 5 menit agar cache server terupdate</li>
+                    <li>Hubungi Rumahweb: minta aktifkan mod_rewrite jika masih error</li>
+                </ul>
+
+                <h3>❌ File tidak ter-upload</h3>
+                <p><strong>Solusi:</strong></p>
+                <ul class="checklist">
+                    <li>Coba upload 1 file dulu untuk test koneksi</li>
+                    <li>Gunakan FTP jika File Manager timeout</li>
+                    <li>Check ukuran file (biasanya max 100MB per file)</li>
+                    <li>Coba di browser lain jika masih gagal</li>
+                </ul>
+
+                <h3>❌ Halaman / CSS / JavaScript tidak muncul</h3>
+                <p><strong>Solusi:</strong></p>
+                <ul class="checklist">
+                    <li>Hard refresh (Ctrl+F5)</li>
+                    <li>Check folder assets ada atau tidak di public_html</li>
+                    <li>Buka DevTools (F12) untuk lihat error di console</li>
+                    <li>Pastikan URL benar (jangan ada typo di subdomain)</li>
+                </ul>
+            </div>
+
+            <div class="section" style="background: #e8f5e9; border-left: 4px solid #4caf50;">
+                <h2><span class="icon">✨</span>Anda Siap untuk Go Live!</h2>
+                <p>Website Anda sudah sepenuhnya diprepare untuk diupload ke cPanel. File-file sudah di-compress dan siap download.</p>
+                <div class="button-group">
+                    <button class="button button-primary" onclick="this.textContent='✓ Download Dimulai...'; setTimeout(() => this.textContent='📥 Download', 2000);">📥 Download ZIP File</button>
+                    <a href="#" class="button button-secondary">📖 Baca Panduan Lengkap</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="icon">📞</span>Perlu Bantuan?</h2>
+                <p><strong>Hubungi Rumahweb Support jika mengalami masalah:</strong></p>
+                <ul class="checklist">
+                    <li><strong>Website:</strong> https://www.rumahweb.com/kontak</li>
+                    <li><strong>Live Chat:</strong> Tersedia di website Rumahweb</li>
+                    <li><strong>Email:</strong> Lihat dari dashboard Rumahweb</li>
+                    <li><strong>Telepon:</strong> Nomor support ada di invoice/welcome email</li>
+                </ul>
+                
+                <h3 style="margin-top: 20px;">Kapan Hubungi Support:</h3>
+                <ul class="checklist">
+                    <li>Upload error / file tidak muncul di server</li>
+                    <li>Error 505 / Internal Server Error</li>
+                    <li>Routing tidak bekerja (404 error saat refresh page)</li>
+                    <li>Meminta bantuan aktifkan mod_rewrite</li>
+                    <li>Domain belum mengarah ke cPanel dengan benar</li>
+                </ul>
+            </div>
+
+            <div class="status-box" style="background: #f3e5f5; border-left: 5px solid #764ba2; margin-top: 30px;">
+                <h3 style="color: #6a1b9a;">🎉 Selamat!</h3>
+                <p style="color: #8e24aa;">Website Anda siap untuk live di cPanel Rumahweb. Ikuti langkah-langkah di atas dan website Anda akan online dalam beberapa menit!
+            </p></div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Website Ready for cPanel</strong> | Generated: 2026-02-07 | Pasukan Alim Kosombi 2 DC</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Built with ❤️ | Ready to deploy</p>
+        </div>
+    </div>
+</body>
+</html>

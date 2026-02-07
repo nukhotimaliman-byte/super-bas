@@ -1,0 +1,81 @@
+╔════════════════════════════════════════════════════════════╗
+║         WEBSITE SIAP UNTUK CPANEL - CHECKLIST              ║
+╚════════════════════════════════════════════════════════════╝
+
+📥 FILE YANG BISA ANDA DOWNLOAD SEKARANG:
+
+1. ✅ website-cpanel-ready.zip
+   → File utama untuk di-upload ke cPanel
+   → Size: ~138 KB (sudah compressed)
+   → Isi: HTML, CSS, JavaScript compiled
+
+2. ✅ PANDUAN-VISUAL.html
+   → Panduan interaktif dengan interface visual
+   → Buka di browser untuk melihat instruksi lengkap
+   → Cocok untuk dibaca di mobile juga
+
+3. ✅ INSTRUKSI-UPLOAD-CPANEL.txt
+   → Panduan text lengkap step-by-step
+   → Include troubleshooting dan tips
+   → Format plain text, bisa dibaca di editor apapun
+
+4. ✅ RINGKAS-CEPAT.txt
+   → Quick start reference
+   → Instruksi minimal (hanya yang penting)
+   → Untuk quick lookup
+
+📋 ISI DARI website-cpanel-ready.zip:
+
+website-untuk-cpanel/
+├── index.html ........................... File utama
+├── .htaccess ............................ Config routing (WAJIB!)
+├── PANDUAN-CPANEL.md ................... Dokumentasi markdown
+├── _redirects ........................... Netlify config
+└── assets/
+    ├── index-Dsqa7O20.js ............... JavaScript (494 KB)
+    └── index-DC0SG-Zv.css ............. CSS (2.8 KB)
+
+═════════════════════════════════════════════════════════════
+
+🚀 QUICK START STEPS:
+
+1. Download: website-cpanel-ready.zip
+
+2. Extract ZIP → akan membuat folder "website-untuk-cpanel"
+
+3. Login ke cPanel Rumahweb → File Manager → public_html
+
+4. Delete file lama (jika ada) 
+
+5. Upload semua file dari folder website-untuk-cpanel ke public_html:
+   ✓ index.html
+   ✓ folder assets/ (dengan isinya)
+   ✓ .htaccess
+
+6. Tunggu 5 menit, lalu buka domain Anda 
+
+7. SELESAI! Website Anda live! 🎉
+
+═════════════════════════════════════════════════════════════
+
+⚠️ PENTING - JANGAN LUPA:
+
+✓ File .htaccess HARUS ada - ini untuk routing
+✓ Folder assets HARUS ada - ini berisi CSS & JS
+✓ Clear cache browser kalau ada masalah (Ctrl+F5)
+✓ Tunggu 5-10 menit setelah upload
+
+═════════════════════════════════════════════════════════════
+
+📚 BACA JUGA:
+
+→ PANDUAN-VISUAL.html    (Rekomendasi! Visual & lengkap)
+→ INSTRUKSI-UPLOAD-CPANEL.txt (Text lengkap full detail)
+→ RINGKAS-CEPAT.txt      (Quick reference)
+
+═════════════════════════════════════════════════════════════
+
+✨ SEMUANYA SUDAH SIAP! 
+Tinggal download dan upload ke cPanel 🚀
+
+═════════════════════════════════════════════════════════════

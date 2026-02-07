@@ -1,0 +1,127 @@
+PANDUANUPLOAD KE CPANEL RUMAHWEB - QUICK START
+
+==============================================================
+STEP-BY-STEP UPLOAD (Mudah & Cepat)
+==============================================================
+
+STEP 1: Download & Extract ZIP
+- ✓ Anda sudah punya file "website-cpanel-ready.zip"
+- Extract file ZIP ini ke folder dengan nama "website-untuk-cpanel"
+- Di dalamnya ada: index.html, folder assets/, dan .htaccess
+
+STEP 2: Login ke cPanel Rumahweb
+1. Buka: https://rumahweb.com (atau dashboard Rumahweb Anda)
+2. Masuk dengan akun cPanel Anda
+3. Jika sudah logged in, akses File Manager langsung
+
+STEP 3: Upload Menggunakan File Manager
+1. Di cPanel, klik "File Manager"
+2. Pilih "public_html" folder (ini adalah root website)
+3. Jika ada file lama, hapus semuanya dulu (atau rename)
+4. Klik tombol "Upload" atau drag-drop file:
+   ✓ index.html
+   ✓ Folder "assets" beserta isinya (.css & .js)
+   ✓ File ".htaccess" (SANGAT PENTING!)
+5. Tunggu upload selesai (progress bar 100%)
+6. Refresh halaman File Manager
+
+STEP 4: Verifikasi Sudah Upload dengan Benar
+1. Lihat di File Manager, pastikan ada:
+   - index.html ✓
+   - assets/ folder ✓
+   - .htaccess ✓
+2. Jika ada "PANDUAN-CPANEL.md", itu bonus 😊
+
+STEP 5: Test Website
+1. Buka browser
+2. Masuk ke domain Anda (contoh: www.nama-domain.com)
+3. Website seharusnya sudah muncul! 🎉
+
+==============================================================
+ALTERNATIF: MENGGUNAKAN FTP (Lebih Cepat untuk File Banyak)
+==============================================================
+
+Jika File Manager lambat, gunakan FTP:
+
+1. Download FTP Client gratis (contoh: FileZilla)
+2. Di cPanel, cari "FTP Accounts" untuk dapat akun FTP
+3. Buka FileZilla dan isi:
+   - Host: ftp.nama-domain.com (atau IP dari Rumahweb)
+   - Username: (dari FTP Accounts)
+   - Password: (dari FTP Accounts)
+   - Port: 21
+4. Connect, navigasi ke "public_html"
+5. Drag & drop semua file dari folder "website-untuk-cpanel"
+6. Upload selesai, akses domain Anda
+
+==============================================================
+TROUBLESHOOTING
+==============================================================
+
+❌ MASALAH: Website blank / error 404
+✅ SOLUSI:
+- Clear cache browser (Ctrl+F5 atau Cmd+Shift+R)
+- Pastikan .htaccess ada di public_html
+- Tunggu 5 menit untuk cache server
+- Jika masih error, hubungi Rumahweb support
+
+❌ MASALAH: File tidak ter-upload
+✅ SOLUSI:
+- Coba upload 1 file dulu untuk test
+- Gunakan FTP jika File Manager timeout
+- Check ukuran file (biasanya max 100MB per file)
+
+❌ MASALAH: Routing tidak bekerja (page refresh error)
+✅ SOLUSI:
+- Edit .htaccess dan pastikan sudah ada
+- Hubungi Rumahweb: minta pastikan mod_rewrite aktif
+- Mereka bisa aktifkan di server settings cPanel
+
+❌ MASALAH: Halaman / CSS tidak muncul
+✅ SOLUSI:
+- Hard refresh browser (Ctrl+F5)
+- Check Assets folder isinya ada atau tidak
+- Clear CloudFlare cache jika menggunakannya
+
+==============================================================
+FILE YANG ANDA TERIMA
+==============================================================
+
+📦 website-cpanel-ready.zip
+   └── website-untuk-cpanel/
+       ├── index.html ........................ File utama
+       ├── .htaccess ......................... Routing config (WAJIB!)
+       ├── assets/
+       │   ├── index-Dsqa7O20.js ........... JavaScript compiled
+       │   └── index-DC0SG-Zv.css ......... CSS compiled
+       ├── PANDUAN-CPANEL.md ............... Panduan detail
+       └── _redirects ....................... Netlify config (opsional)
+
+==============================================================
+TIPS SUKSES
+==============================================================
+
+✅ Pastikan .htaccess HARUS ada - ini yang bikin routing bekerja
+✅ Jangan ubah nama atau hapus file di folder assets
+✅ Tunggu beberapa menit setelah upload sebelum test
+✅ Clear cache browser kalau ada masalah (penting!)
+✅ Jika perlu bantuan, hubungi Rumahweb support
+
+==============================================================
+KONTAK & BANTUAN
+==============================================================
+
+🌐 Rumahweb Support: https://www.rumahweb.com/kontak
+📧 Live Chat tersedia di website Rumahweb
+📞 Phone support juga tersedia
+
+Kapan hubungi Rumahweb:
+- Upload error / file tidak muncul di server
+- Error 505 / Internal Server Error
+- Routing tidak bekerja (404 error saat refresh)
+- Meminta aktifkan mod_rewrite
+
+==============================================================
+SELESAI! 🎉
+Website Anda sudah live di cPanel Rumahweb!
+==============================================================
